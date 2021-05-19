@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ICocktail } from './cocktail';
+import { ICocktail } from '../shared/models/cocktail';
 
 @Component({
   selector: 'app-cocktails-list-no-alcohol',

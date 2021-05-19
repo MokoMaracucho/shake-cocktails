@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { CocktailsNoAlcoholComponent } from './cocktails-no-alcohol/cocktails-no-alcohol.component';
 import { CocktailsAlcoholComponent } from './cocktails-alcohol/cocktails-alcohol.component';
 import { CocktailsListNoAlcoholComponent } from './cocktails-list-no-alcohol/cocktails-list-no-alcohol.component';
+import { CocktailsNoAlcoholModule } from './cocktails-no-alcohol/cocktails-no-alcohol.module';
+import { CocktailsAlcoholModule } from './cocktails-alcohol/cocktails-alcohol.module';
+import { CocktailsListNoAlcoholModule } from './cocktails-list-no-alcohol/cocktails-list-no-alcohol.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CocktailsListNoAlcoholComponent } from './cocktails-list-no-alcohol/coc
       { path: 'cocktails_alcool', component: CocktailsAlcoholComponent },
       { path: 'cocktails_list_no_alcool', component: CocktailsListNoAlcoholComponent},
       { path: '**', redirectTo: 'cocktails_no_alcohol', pathMatch: 'full' }
-    ])
+    ]),
+    CocktailsNoAlcoholModule,
+    CocktailsAlcoholModule,
+    CocktailsListNoAlcoholModule
   ],
   providers: [],
   bootstrap: [AppComponent]
