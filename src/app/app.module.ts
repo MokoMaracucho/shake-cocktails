@@ -21,10 +21,11 @@ import { CocktailsListNoAlcoholComponent } from './cocktails-list-no-alcohol/coc
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'cocktail_no_alcohol', component: CocktailsNoAlcoholComponent },
-      { path: '', redirectTo: 'cocktail_no_alcohol', pathMatch: 'full' },
-      { path: 'cocktail_alcohol', component: CocktailsAlcoholComponent },
-      { path: '**', redirectTo: 'cocktail_no_alcohol', pathMatch: 'full' }
+      { path: 'cocktails_no_alcohol', component: CocktailsNoAlcoholComponent },
+      { path: '', redirectTo: 'laboratory', pathMatch: 'full' },
+      { path: 'cocktails_alcool', component: CocktailsAlcoholComponent },
+      { path: 'cocktails_list_no_alcool', component: CocktailsListNoAlcoholComponent},
+      { path: '**', redirectTo: 'cocktails_no_alcohol', pathMatch: 'full' }
     ])
   ],
   providers: [],
