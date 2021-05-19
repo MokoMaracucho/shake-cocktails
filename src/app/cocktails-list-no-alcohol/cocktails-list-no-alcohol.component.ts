@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ICocktail } from './cocktail';
+
 @Component({
   selector: 'app-cocktails-list-no-alcohol',
   templateUrl: './cocktails-list-no-alcohol.component.html',
@@ -9,7 +11,7 @@ export class CocktailsListNoAlcoholComponent implements OnInit {
 
   public title = 'Alcohol-free cocktail list';
 
-  public cocktails_alcohol_free: any[] = [
+  public cocktails_alcohol_free: ICocktail[] = [
     {
       id: 1,
       name: 'Bora Bora',
