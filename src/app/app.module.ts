@@ -11,6 +11,7 @@ import { CocktailsListNoAlcoholComponent } from './cocktails-list-no-alcohol/coc
 import { CocktailsNoAlcoholModule } from './cocktails-no-alcohol/cocktails-no-alcohol.module';
 import { CocktailsAlcoholModule } from './cocktails-alcohol/cocktails-alcohol.module';
 import { CocktailsListNoAlcoholModule } from './cocktails-list-no-alcohol/cocktails-list-no-alcohol.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,16 +24,10 @@ import { CocktailsListNoAlcoholModule } from './cocktails-list-no-alcohol/cockta
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'cocktails_no_alcohol', component: CocktailsNoAlcoholComponent },
-      { path: '', redirectTo: 'laboratory', pathMatch: 'full' },
-      { path: 'cocktails_alcool', component: CocktailsAlcoholComponent },
-      { path: 'cocktails_list_no_alcool', component: CocktailsListNoAlcoholComponent},
-      { path: '**', redirectTo: 'cocktails_no_alcohol', pathMatch: 'full' }
-    ]),
     CocktailsNoAlcoholModule,
     CocktailsAlcoholModule,
-    CocktailsListNoAlcoholModule
+    CocktailsListNoAlcoholModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
