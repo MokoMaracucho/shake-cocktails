@@ -4,7 +4,7 @@
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col mb-4" *ngFor="let cocktail of cocktails_alcohol_free">
       <div class="card" style="width: 9rem;">
-        <img class="card-img-top" src="{{ cocktail.imgUrl }}" alt="Card image cap">
+        <img class="card-img-top" [src]="cocktail.imgUrl" [title]="cocktail.name" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{ cocktail.name }}</h5>
           <p class="card-text">{{ cocktail.description }}</p>
